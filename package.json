@@ -1,0 +1,35 @@
+{
+  "name": "@formidablejs/logger",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "description": "The Formidable Logger is a Monolog-inspired logging library",
+  "author": "Donald Pakkies",
+  "license": "MIT",
+  "types": "types/index.d.ts",
+  "bugs": "https://github.com/formidablejs/logger/issues",
+  "homepage": "https://github.com/formidablejs/logger",
+  "repository": "https://github.com/formidablejs/logger",
+  "files": [
+    "lib",
+    "types"
+  ],
+  "scripts": {
+    "build": "imbac src --output=lib --platform=node --format=cjs --clean"
+  },
+  "peerDependencies": {
+    "@formidablejs/framework": "*"
+  },
+  "devDependencies": {
+    "@formidablejs/framework": "^0.13.11",
+    "imba": "2.0.0-alpha.215"
+  },
+  "dependencies": {
+    "@livy/console-formatter": "^1.0.3",
+    "@livy/console-handler": "^1.0.3",
+    "@livy/contracts": "^1.1.1",
+    "@livy/file-handler": "^1.0.3",
+    "@livy/line-formatter": "^1.0.3",
+    "@livy/logger": "^1.0.5",
+    "@livy/rotating-file-handler": "^1.0.4"
+  }
+}
