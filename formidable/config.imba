@@ -64,7 +64,7 @@ export default {
 		slack: {
 			driver: 'slack'
 			url: env('LOG_SLACK_WEBHOOK_URL')
-			username: 'Formdidable Log'
+			username: 'Formidable Log'
 			iconEmoji: ':boom:'
 			level: env('LOG_LEVEL', 'critical')
 		}
