@@ -41,7 +41,7 @@ export default {
     | the box, Formidable uses the Livy JavaScript logging library. This gives
     | you a variety of powerful log handlers / formatters to utilize.
     |
-    | Available Drivers: "slack", "console", "single", "daily", "slack"
+    | Available Drivers: "stack", "console", "single", "daily", "slack"
     |
     */
 
