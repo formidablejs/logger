@@ -1,3 +1,5 @@
+// auto-generated
+
 export class ConsoleDriver extends Driver {
     handler(): ConsoleHandler;
 }

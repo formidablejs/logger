@@ -1,3 +1,5 @@
+// auto-generated
+
 export class SingleDriver extends Driver {
     handler(): FileHandler;
 }

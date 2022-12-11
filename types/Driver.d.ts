@@ -1,3 +1,5 @@
+// auto-generated
+
 export class Driver {
     constructor(options?: {});
     _options: {};

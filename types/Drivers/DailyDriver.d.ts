@@ -1,9 +1,11 @@
+// auto-generated
+
 export class DailyDriver extends Driver {
     /**
     @returns { string }
     */
     get path(): string;
-    handler(): FileHandler;
+    handler(): RotatingFileHandler;
 }
 import { Driver } from "../Driver";
-import { FileHandler } from "@livy/file-handler";
+import { RotatingFileHandler } from "@livy/rotating-file-handler";

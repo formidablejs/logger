@@ -1,3 +1,3 @@
-import { ApplicationException } from "@formidablejs/framework";
+import { ApplicationException } from '@formidablejs/framework'
 
 export class InvalidLogDriverException extends ApplicationException {}
