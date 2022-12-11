@@ -7,9 +7,11 @@
   "license": "MIT",
   "types": "types/index.d.ts",
   "bugs": "https://github.com/formidablejs/logger/issues",
-  "homepage": "https://github.com/formidablejs/logger",
+  "homepage": "https://www.formidablejs.org/docs/logging",
   "repository": "https://github.com/formidablejs/logger",
+  "publisher": "formidable/Package.js",
   "files": [
+    "formidable",
     "lib",
     "types"
   ],
