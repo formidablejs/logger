@@ -9,7 +9,7 @@ export class SingleDriver < Driver
 			formatter: new LineFormatter({
 				include: {
 					datetime: true,
-					channel: false,
+					channel: true,
 					level: true,
 					severity: false,
 					message: true,

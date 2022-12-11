@@ -9,7 +9,7 @@ export class ConsoleDriver < Driver
 			formatter: new ConsoleFormatter({
 				include: {
 					datetime: true,
-					channel: false,
+					channel: true,
 					level: true,
 					severity: false,
 					message: true,
