@@ -2,6 +2,14 @@
 
 The Formidable Logger is a Monolog-inspired logging library.
 
+<center>
+
+  ![test](https://github.com/formidablejs/logger/actions/workflows/tests.yml/badge.svg)
+  ![npm](https://img.shields.io/npm/v/@formidablejs/logger)
+  ![GitHub](https://img.shields.io/github/license/formidablejs/logger)
+
+</center>
+
 Credits
 --------
 
