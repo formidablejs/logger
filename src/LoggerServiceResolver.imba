@@ -5,6 +5,7 @@ import { DailyDriver } from './Drivers/DailyDriver'
 import { SingleDriver } from './Drivers/SingleDriver'
 import { SlackDriver } from './Drivers/SlackDriver'
 import { StackDriver } from './Drivers/StackDriver'
+import { ConfigMissingException } from './Exceptions/ConfigMissingException'
 import { get } from './Logger'
 import { Log } from './Logger'
 import { register } from './Logger'
@@ -12,13 +13,16 @@ import type { HandlerInterface } from '@livy/contracts'
 
 export class LoggerServiceResolver < ServiceResolver
 
-	get channel\object
+	get channel\any
 		const name = self.app.config.get('logging.default')
 
 		self.app.config.get("logging.channels.{name}")
 
 	get handler\HandlerInterface
-		const driver = get(channel.driver)
+		if !self.channel
+			throw new ConfigMissingException "Logging config is missing"
+
+		const driver = get(self.channel.driver)
 
 		(new driver(channel)).handler!
 
