@@ -2,6 +2,8 @@ import { Driver } from './Driver'
 import { ConsoleDriver } from './Drivers/ConsoleDriver'
 import { DailyDriver } from './Drivers/DailyDriver'
 import { SingleDriver } from './Drivers/SingleDriver'
+import { SlackDriver } from './Drivers/SlackDriver'
+import { StackDriver } from './Drivers/StackDriver'
 import { InvalidLogDriverException } from './Exceptions/InvalidLogDriverException'
 import { RegisteredLogDriverException } from './Exceptions/RegisteredLogDriverException'
 import { Log } from './Logger'
@@ -16,6 +18,8 @@ export {
 	ConsoleDriver
 	DailyDriver
 	SingleDriver
+	SlackDriver
+	StackDriver
 	InvalidLogDriverException
 	RegisteredLogDriverException
 	Log
