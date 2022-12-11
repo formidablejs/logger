@@ -23,7 +23,7 @@ def get name\string
 	registered[name]
 
 # Instantiate logger
-const Log\LoggerInterface = new createLogger('formidable', {
+const Log\LoggerInterface = new createLogger(config('app.env', 'local'), {
 	mode: config('logging.mode', 'sync')
 })
 
