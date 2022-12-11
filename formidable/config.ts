@@ -30,7 +30,7 @@ export default {
     |
     */
 
-    mode: env('LOG_MODE', 'async'),
+    mode: env('LOG_MODE', 'sync'),
 
     /*
     |--------------------------------------------------------------------------
@@ -41,11 +41,16 @@ export default {
     | the box, Formidable uses the Livy JavaScript logging library. This gives
     | you a variety of powerful log handlers / formatters to utilize.
     |
-    | Available Drivers: "console", "single", "daily"
+    | Available Drivers: "slack", "console", "single", "daily", "slack"
     |
     */
 
     channels: {
+        stack: {
+            driver: 'stack',
+            channels: ['single']
+        },
+
         console: {
             driver: 'console',
             level: env('LOG_LEVEL', 'debug')
@@ -61,7 +66,16 @@ export default {
             driver: 'daily',
             path: 'storage/logs/formidable.log',
             level: env('LOG_LEVEL', 'debug'),
-            days: 14
+            maxFiles: 14,
+            threshold: 'day'
         },
+
+        slack: {
+            driver: 'slack',
+            url: env('LOG_SLACK_WEBHOOK_URL'),
+            username: 'Formidable Log',
+            iconEmoji: ':boom:',
+            level: env('LOG_LEVEL', 'critical')
+        }
     }
 }

@@ -30,8 +30,10 @@
     "@livy/console-handler": "^1.0.3",
     "@livy/contracts": "^1.1.1",
     "@livy/file-handler": "^1.0.3",
+    "@livy/group-handler": "^1.0.3",
     "@livy/line-formatter": "^1.0.3",
     "@livy/logger": "^1.0.5",
-    "@livy/rotating-file-handler": "^1.0.4"
+    "@livy/rotating-file-handler": "^1.0.4",
+    "@livy/slack-webhook-handler": "^1.0.3"
   }
 }
