@@ -5,7 +5,7 @@ The Formidable Logger is a Monolog-inspired logging library.
 Credits
 --------
 
-Formidable Loggger is built on top of [`@loilo/livy`](https://github.com/loilo/livy)
+Formidable Logger is built on top of [`@loilo/livy`](https://github.com/loilo/livy)
 
 Security
 -------
