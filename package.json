@@ -23,7 +23,7 @@
     "@formidablejs/framework": "*"
   },
   "devDependencies": {
-    "@formidablejs/framework": "^0.13.11",
+    "@formidablejs/framework": "0.13.11",
     "@types/jest": "^29.2.4",
     "imba": "2.0.0-alpha.215",
     "jest": "^29.3.1",
