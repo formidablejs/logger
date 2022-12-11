@@ -22,9 +22,16 @@ def get name\string
 
 	registered[name]
 
+let environment\string = 'local'
+let loggingMode\string = 'sync'
+
+try
+	environment = config('app.env', 'local')
+	loggingMode = config('logging.mode', 'sync')
+
 # Instantiate logger
-const Log\LoggerInterface = new createLogger(config('app.env', 'local'), {
-	mode: config('logging.mode', 'sync')
+const Log\LoggerInterface = new createLogger(environment, {
+	mode: loggingMode
 })
 
 export {
