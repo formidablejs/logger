@@ -4,6 +4,7 @@ import { DailyDriver } from './Drivers/DailyDriver'
 import { SingleDriver } from './Drivers/SingleDriver'
 import { SlackDriver } from './Drivers/SlackDriver'
 import { StackDriver } from './Drivers/StackDriver'
+import { ConfigMissingException } from './Exceptions/ConfigMissingException'
 import { InvalidLogDriverException } from './Exceptions/InvalidLogDriverException'
 import { RegisteredLogDriverException } from './Exceptions/RegisteredLogDriverException'
 import { Log } from './Logger'
@@ -20,6 +21,7 @@ export {
 	SingleDriver
 	SlackDriver
 	StackDriver
+	ConfigMissingException
 	InvalidLogDriverException
 	RegisteredLogDriverException
 	Log
