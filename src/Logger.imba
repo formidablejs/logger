@@ -34,6 +34,9 @@ const Log\LoggerInterface = new createLogger(environment, {
 	mode: loggingMode
 })
 
+Log.channel = do(name\string)
+	null
+
 export {
 	get,
 	Log,
