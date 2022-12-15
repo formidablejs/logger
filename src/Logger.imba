@@ -27,9 +27,6 @@ def get name\string
 	registered[name]
 
 def getInstance name\string
-	if !available[name]
-		throw new Error 'Invalid instance'
-
 	available[name]
 
 def registerInstance name\string, handler

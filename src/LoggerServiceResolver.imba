@@ -44,13 +44,15 @@ export class LoggerServiceResolver < ServiceResolver
 
 		Log.handlers.add(self.handler)
 
+		registerInstance(self.app.config.get('logging.default'), Log)
+
 	def registerChannel
 		const environment = self.app.config.get('app.env', 'local')
 		const loggingMode = self.app.config.get('logging.mode', 'sync')
 
 		# Switch to a different logger
 		Log.channel = do(name\string, options = {})
-			const instance = getInstance[name]
+			const instance = getInstance(name)
 
 			if instance then return instance
 

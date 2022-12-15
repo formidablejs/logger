@@ -1,11 +1,15 @@
 import { Driver } from './Driver'
 import { LoggerInterface } from '@livy/contracts'
 
+type ChannelOptions = {
+    mode: 'async' | 'sync'
+}
+
 export interface Log extends LoggerInterface {
     /**
      * Use a different channel
      */
-    channel: (name: string, options: any) => LoggerInterface
+    channel: (name: string, options?: ChannelOptions) => LoggerInterface
 }
 
 export const Log: Log;
