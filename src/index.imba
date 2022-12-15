@@ -4,6 +4,9 @@ import { DailyDriver } from './Drivers/DailyDriver'
 import { SingleDriver } from './Drivers/SingleDriver'
 import { SlackDriver } from './Drivers/SlackDriver'
 import { StackDriver } from './Drivers/StackDriver'
+import { DiscordDriver } from './Drivers/DiscordDriver'
+import { DiscordWebhookHandler } from './Handlers/DiscordWebhookHandler'
+import { DiscordRecord } from './Records/DiscordRecord'
 import { ConfigMissingException } from './Exceptions/ConfigMissingException'
 import { InvalidLogDriverException } from './Exceptions/InvalidLogDriverException'
 import { RegisteredLogDriverException } from './Exceptions/RegisteredLogDriverException'
@@ -21,6 +24,9 @@ export {
 	SingleDriver
 	SlackDriver
 	StackDriver
+	DiscordDriver
+	DiscordWebhookHandler
+	DiscordRecord
 	ConfigMissingException
 	InvalidLogDriverException
 	RegisteredLogDriverException
