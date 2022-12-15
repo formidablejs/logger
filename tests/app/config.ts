@@ -17,6 +17,10 @@ export class Config extends ConfigRepository {
                         driver: 'console',
                         level: 'debug'
                     },
+                    test: {
+                        driver: 'console',
+                        level: 'debug'
+                    },
                 }
             }
         }
