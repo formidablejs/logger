@@ -81,4 +81,16 @@ describe('integration test', () => {
 
         logSpy.mockRestore()
     })
+
+    it('"Log.channel" should add a new Log instance', () => {
+        const log = Log.channel('test')
+
+        expect(log._handlers.size).toBeGreaterThan(0)
+    })
+
+    it('"Log.channel" should throw an error', () => {
+        expect(() => {
+            Log.channel('random-channel')
+        }).toThrowError('Logging config is missing')
+    })
 })
