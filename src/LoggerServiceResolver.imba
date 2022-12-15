@@ -6,6 +6,7 @@ import { DailyDriver } from './Drivers/DailyDriver'
 import { SingleDriver } from './Drivers/SingleDriver'
 import { SlackDriver } from './Drivers/SlackDriver'
 import { StackDriver } from './Drivers/StackDriver'
+import { DiscordDriver } from './Drivers/DiscordDriver'
 import { ConfigMissingException } from './Exceptions/ConfigMissingException'
 import { get } from './Logger'
 import { Log } from './Logger'
@@ -37,6 +38,7 @@ export class LoggerServiceResolver < ServiceResolver
 		register('daily', DailyDriver)
 		register('console', ConsoleDriver)
 		register('slack', SlackDriver)
+		register('discord', DiscordDriver)
 
 		self.registerChannel!
 
