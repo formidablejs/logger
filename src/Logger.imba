@@ -6,7 +6,11 @@ import type { LogLevel } from '@livy/contracts'
 import type { LogRecordContext } from '@livy/contracts'
 import type { LoggerInterface } from '@livy/contracts'
 
+# Registered channels
 const registered = {}
+
+# Available logger instances
+const available = {}
 
 # Register driver
 def register\void name\string, driver\Driver 
@@ -22,6 +26,12 @@ def get name\string
 
 	registered[name]
 
+def getInstance name\string
+	available[name]
+
+def registerInstance name\string, handler
+	available[name] = handler
+
 let environment\string = 'local'
 let loggingMode\string = 'sync'
 
@@ -35,6 +45,8 @@ const Log\LoggerInterface = new createLogger(environment, {
 })
 
 export {
+	getInstance,
+	registerInstance,
 	get,
 	Log,
 	register,
