@@ -54,6 +54,9 @@ export class LoggerServiceResolver < ServiceResolver
 
 			const channel = self.app.config.get("logging.channels.{name}")
 
+			if !channel
+				throw new ConfigMissingException "Logging config is missing"
+
 			const driver = get(channel.driver)
 
 			const handler = (new driver(channel)).handler!
