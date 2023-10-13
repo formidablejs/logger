@@ -108,6 +108,8 @@ describe('integration test', () => {
 
         expect(readFileSync(file, 'utf-8')).toContain(random)
 
-        rmSync(process.cwd() + '/storage', { recursive: true, force: true })
+        if (process.platform !== 'win32') {
+            rmSync(process.cwd() + '/storage', { recursive: true, force: true })
+        }
     })
 })
