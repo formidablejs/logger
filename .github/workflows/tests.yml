@@ -3,9 +3,20 @@ name: Tests
 on: push
 
 jobs:
-  build:
-
+  build-on-linux:
     runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install modules
+      run: npm install
+    - name: Build lib
+      run: npm run build
+    - name: Run tests
+      run: npm test
+
+  build-on-windows:
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
