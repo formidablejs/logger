@@ -3,7 +3,7 @@ name: Tests
 on: push
 
 jobs:
-  build-on-linux:
+  linux:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,7 +15,7 @@ jobs:
     - name: Run tests
       run: npm test
 
-  build-on-windows:
+  windows:
     runs-on: windows-latest
 
     steps:
