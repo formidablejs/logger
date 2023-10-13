@@ -6,15 +6,18 @@ import { Driver } from '../Driver'
 
 export class SingleDriver < Driver
 
-	def handler
-		let path = self.options.path ?? 'storage/logs/formidable.log'
+	get path
+		let path\string = self.options.path ?? join(process.cwd!, 'storage', 'logs', 'formidable.log')
 
-		if path.slice(0, 1) !== '/'
-			path = join(process.cwd(), path)
+		if (process.platform !== 'win32' && path.slice(0, 1) !== '/') || (process.platform === 'win32' && path.slice(1, 2) !== ':')
+			path = join(process.cwd!, path)
 
 		if !existsSync dirname(path)
 			try mkdirSync dirname(path), { recursive: true }
 
+		path
+
+	def handler
 		new FileHandler(path, {
 			formatter: new LineFormatter({
 				include: {
