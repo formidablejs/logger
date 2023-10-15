@@ -1,4 +1,7 @@
+
 import './app'
+import { existsSync, readFileSync, rmSync } from 'fs'
+import { join } from 'path'
 import { Log } from '../lib'
 
 describe('integration test', () => {
@@ -92,5 +95,21 @@ describe('integration test', () => {
         expect(() => {
             Log.channel('random-channel')
         }).toThrowError('Logging config is missing')
+    })
+
+    it('Log to file', () => {
+        const random = Math.random().toString(36)
+
+        Log.channel('file').info(random)
+
+        const file = join(process.cwd(), 'storage', 'logs', 'formidable.log')
+
+        expect(existsSync(file)).toBeTruthy()
+
+        expect(readFileSync(file, 'utf-8')).toContain(random)
+
+        if (process.platform !== 'win32') {
+            rmSync(process.cwd() + '/storage', { recursive: true, force: true })
+        }
     })
 })

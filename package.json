@@ -1,6 +1,6 @@
 {
   "name": "@formidablejs/logger",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/index.js",
   "description": "The Formidable Logger is a Monolog-inspired logging library",
   "author": "Donald Pakkies",
@@ -23,20 +23,20 @@
     "@formidablejs/framework": "*"
   },
   "devDependencies": {
-    "@formidablejs/framework": "0.13.11",
-    "@types/jest": "^29.2.4",
+    "@formidablejs/framework": "0.23.8",
+    "@types/jest": "^29.5.5",
     "imba": "2.0.0-alpha.215",
-    "jest": "^29.3.1",
-    "ts-jest": "^29.0.3"
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1"
   },
   "dependencies": {
     "@livy/console-formatter": "^1.0.3",
     "@livy/console-handler": "^1.0.3",
-    "@livy/contracts": "^1.1.1",
-    "@livy/file-handler": "^1.0.3",
-    "@livy/group-handler": "^1.0.3",
-    "@livy/line-formatter": "^1.0.3",
-    "@livy/logger": "^1.0.5",
+    "@livy/contracts": "^1.1.2",
+    "@livy/file-handler": "^1.0.4",
+    "@livy/group-handler": "^1.0.4",
+    "@livy/line-formatter": "^1.0.4",
+    "@livy/logger": "^1.0.6",
     "@livy/rotating-file-handler": "^1.0.4",
     "@livy/slack-webhook-handler": "^1.0.3",
     "got": "^12.5.3"
