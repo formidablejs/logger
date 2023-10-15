@@ -1,5 +1,6 @@
 /node_modules
 /lib
+/storage
 /test/e2e
 .env
 .env.backup
